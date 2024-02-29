@@ -8,23 +8,23 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "C:/Users/nic_c/Documents/EGB456-2024/blinky/include",
-                "C:/Users/nic_c/Documents/EGB456-2024/blinky/src",
-                "C:/ti/TivaWare_C_Series-2.2.0.295",
+                "c:/Users/n10752846/Documents/EGH456/blinky/include",
+                "c:/Users/n10752846/Documents/EGH456/blinky/src",
+                "c:/ti/TivaWare_C_Series-2.2.0.295",
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "C:/Users/nic_c/Documents/EGB456-2024/blinky/include",
-                    "C:/Users/nic_c/Documents/EGB456-2024/blinky/src",
-                    "C:/ti/TivaWare_C_Series-2.2.0.295",
+                    "c:/Users/n10752846/Documents/EGH456/blinky/include",
+                    "c:/Users/n10752846/Documents/EGH456/blinky/src",
+                    "c:/ti/TivaWare_C_Series-2.2.0.295",
                     ""
                 ]
             },
             "defines": [
                 "F_CPU=120000000L",
-                "PLATFORMIO=60111",
+                "PLATFORMIO=60113",
                 "ENERGIA_ARCH_TIVAC",
                 "ENERGIA_EK_TM4C1294XL",
                 "PART_TM4C1294NCPDT",
@@ -33,7 +33,7 @@
             ],
             "cStandard": "gnu11",
             "cppStandard": "gnu++11",
-            "compilerPath": "C:/Users/nic_c/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc.exe",
+            "compilerPath": "C:/Users/n10752846/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc.exe",
             "compilerArgs": [
                 "-mthumb",
                 "-mcpu=cortex-m4",
