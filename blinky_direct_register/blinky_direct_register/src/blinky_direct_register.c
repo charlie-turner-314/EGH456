@@ -67,7 +67,8 @@ main(void)
     //
     // Enable the GPIO port that is used for the on-board LED.
     //
-    SYSCTL_RCGCGPIO_R = SYSCTL_RCGCGPIO_R12;
+    SYSCTL_RCGCGPIO_R = SYSCTL_RCGCGPIO_R12;`
+    SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R5;
 
     // Short delay to allow peripheral to enable
     for(ui32Loop = 0; ui32Loop < 200000; ui32Loop++)
@@ -79,8 +80,8 @@ main(void)
     GPIO_PORTN_DEN_R |= 0x02;
 
     // Enable GPIO for LED D3 and D4 (PF4 and PF0)
-    //GPIO_PORTF_AHB_DEN_R = 0x01;
-    //GPIO_PORTF_AHB_DEN_R |= 
+    GPIO_PORTF_AHB_DEN_R = 0x01;
+    GPIO_PORTF_AHB_DEN_R |= 0x10;
     
 
 
@@ -88,8 +89,8 @@ main(void)
     GPIO_PORTN_DIR_R = 0x01;
     GPIO_PORTN_DIR_R |= 0x02;
 
-    //GPIO_PORTF_AHB_DIR_R |= 0x01;
-//    GPIO_PORTF_AHB_DIR_R |= 0x10;
+    GPIO_PORTF_AHB_DIR_R |= 0x01;
+    GPIO_PORTF_AHB_DIR_R |= 0x10;
 
     //
     // Loop forever.
@@ -101,7 +102,7 @@ main(void)
         // Turn on the LED D2 and D4.
         //
         GPIO_PORTN_DATA_R |= 0x01;
-        GPIO_PORTF_AHB_DATA_R |= 0x01;
+        //GPIO_PORTF_AHB_DATA_R |= 0x01;
         // Off LED D1 and D3
         GPIO_PORTN_DATA_R &= ~(0x02);
         //GPIO_PORTF_AHB_DATA_R &= ~(0x10);
@@ -118,7 +119,7 @@ main(void)
         // Turn off the LED D2 and D4.
         //
         GPIO_PORTN_DATA_R &= ~(0x01);
-        GPIO_PORTF_AHB_DATA_R &= ~(0x01);
+        //GPIO_PORTF_AHB_DATA_R &= ~(0x01);
 
         // On LED D1 and D3
         GPIO_PORTN_DATA_R |= 0x02;
